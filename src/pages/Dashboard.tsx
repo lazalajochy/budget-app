@@ -25,7 +25,11 @@ function Dashboard() {
         setModalContent("");
     };
 
-
+/**
+ * 
+ * VITE_GOOGLE_CLIENT_ID="881936334520-pv1s2id845gef178essfns651m2r2mp0.apps.googleusercontent.com"
+VITE_URL_API="https://budget-api-yqhs.onrender.com"
+ */
     const addIncomes = async () => {
         try {
             const toke = localStorage.getItem("token");
