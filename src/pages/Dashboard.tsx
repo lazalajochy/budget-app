@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import Headers from "../components/Headers";
 import Sidebar from "../components/Sidebar";
 import Charts from "./Charts";
@@ -29,7 +29,7 @@ function Dashboard() {
     const addIncomes = async () => {
         try {
             const toke = localStorage.getItem("token");
-            const response = await apiClient("/income", {salary: incomeAmount, job_title: jobTitle}, "POST", toke as string);
+            await apiClient("/income", {salary: incomeAmount, job_title: jobTitle}, "POST", toke as string);
             closeModal();
         } catch (error) {
             console.log(error, " this is the error...")
@@ -40,7 +40,7 @@ function Dashboard() {
         try {
             const token = localStorage.getItem("token");
             const name = category;
-            const response = await apiClient("/category", {name, amount}, "POST", token as string);
+            await apiClient("/category", {name, amount}, "POST", token as string);
             closeModal();
         } catch (error) {
             console.log(error, " this is the error...")  

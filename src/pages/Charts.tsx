@@ -25,7 +25,7 @@ interface Category {
 };
 
 
-function Charts({openModal}: ChartsProps) {
+function Charts({}: ChartsProps) {
     const [currentIncome, setCurrentIncome] = useState<Income[]>([]);
     const [currentCategory, setCurrentCategory] = useState<Category[]>([]);
     const [totalPayment, setTotalPayment] = useState(0);

@@ -1,4 +1,4 @@
-import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsListCheck, BsMenuButtonWideFill, BsFillGearFill } from 'react-icons/bs';
+import { BsFillArchiveFill, } from 'react-icons/bs';
 import { GiPayMoney } from "react-icons/gi";
 import { CiLogout } from "react-icons/ci";
 import { googleLogout } from '@react-oauth/google';
@@ -39,31 +39,6 @@ function Sidebar({ openSidebarToggle, OpenSidebar, openModal }: SidebarProps) {
                 <li className='sidebar-list-item'>
                     <a onClick={() => openModal("category")}>
                         <BsFillArchiveFill className='icon' /> Category
-                    </a>
-                </li>
-                <li className='sidebar-list-item'>
-                    <a>
-                        <BsFillGrid3X3GapFill className='icon' /> Categories
-                    </a>
-                </li>
-                <li className='sidebar-list-item'>
-                    <a>
-                        <BsPeopleFill className='icon' /> Customers
-                    </a>
-                </li>
-                <li className='sidebar-list-item'>
-                    <a>
-                        <BsListCheck className='icon' /> Inventory
-                    </a>
-                </li>
-                <li className='sidebar-list-item'>
-                    <a>
-                        <BsMenuButtonWideFill className='icon' /> Reports
-                    </a>
-                </li>
-                <li className='sidebar-list-item'>
-                    <a>
-                        <BsFillGearFill className='icon' /> Setting
                     </a>
                 </li>
             </ul>

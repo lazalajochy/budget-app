@@ -1,4 +1,4 @@
-import { BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsJustify } from "react-icons/bs";
+import {  BsPersonCircle, BsJustify } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
 
