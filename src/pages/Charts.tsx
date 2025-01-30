@@ -72,7 +72,7 @@ function Charts({}: ChartsProps) {
                 </div>
                 <div className='card'>
                     <div className="card-inner">
-                        <h3>Categories</h3>
+                        <h3>Expense Categories</h3>
                         <BsFillGrid3X3GapFill className='card_icon' />
                     </div>
                     <h1>{currentCategory?.length ?? 0}</h1>
@@ -88,7 +88,7 @@ function Charts({}: ChartsProps) {
 
                 <div className='card'>
                     <div className="card-inner">
-                        <h3>Total Payment</h3>
+                        <h3>Monthly expenses</h3>
                         <MdPayment className='card_icon' />
                     </div>
                     <h1>RD$ {totalPayment ?? 0}</h1>

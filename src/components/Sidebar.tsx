@@ -3,6 +3,8 @@ import { GiPayMoney } from "react-icons/gi";
 import { CiLogout } from "react-icons/ci";
 import { googleLogout } from '@react-oauth/google';
 import { useNavigate } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
+
 
 
 interface SidebarProps {
@@ -38,7 +40,12 @@ function Sidebar({ openSidebarToggle, OpenSidebar, openModal }: SidebarProps) {
                 </li>
                 <li className='sidebar-list-item'>
                     <a onClick={() => openModal("category")}>
-                        <BsFillArchiveFill className='icon' /> Category
+                        <BsFillArchiveFill className='icon' /> Monthly expenses
+                    </a>
+                </li>
+                <li className='sidebar-list-item'>
+                    <a href='https://github.com/lazalajochy/budget-api' target='_blank' rel="noopener noreferrer">
+                        <FaGithub className='icon' /> Repository Back-End
                     </a>
                 </li>
             </ul>
