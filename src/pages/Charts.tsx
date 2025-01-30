@@ -3,7 +3,7 @@ import { GiPayMoney } from "react-icons/gi";
 import { MdPayments, MdPayment } from "react-icons/md";
 import apiClient from '../utils/request';
 import { useEffect, useState } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer }
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer }
     from 'recharts';
 interface ChartsProps {
     openModal: (content: string) => void;
@@ -32,7 +32,6 @@ function Charts({ }: ChartsProps) {
     const [totalPayment, setTotalPayment] = useState(0);
     const [reminder, setReminder] = useState(0);
     const [data, setData] = useState<{ name: string; uv: number }[]>([]);
-    const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
     const getIncomes = async () => {
         const token = localStorage.getItem("token");
