@@ -120,6 +120,7 @@ function Charts({ }: ChartsProps) {
                     <h1>RD$ {totalPayment ?? 0}</h1>
                 </div>
             </div>
+            {data.length > 0 && (
             <div className='charts'>
                 <ResponsiveContainer width="100%" height="100%">
                     <BarChart
@@ -148,8 +149,8 @@ function Charts({ }: ChartsProps) {
                         </Bar>
                     </BarChart>
                 </ResponsiveContainer>
-
             </div>
+            )}
         </main>
     );
 };
