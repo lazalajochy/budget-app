@@ -26,8 +26,11 @@ interface Category {
     createdBy: string;
 };
 
-
-const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
+const colors = [
+    '#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FF5733', '#C70039', '#900C3F', '#581845', '#1F618D', '#1ABC9C',
+    '#2ECC71', '#F1C40F', '#E67E22', '#E74C3C', '#9B59B6', '#34495E', '#16A085', '#27AE60', '#2980B9', '#8E44AD',
+    '#2C3E50', '#F39C12', '#D35400', '#C0392B', '#BDC3C7', '#7F8C8D', '#DFFF00', '#FFBF00', '#FF7F50', '#DE3163'
+];
 
 const getPath = (x:any, y:any, width:any, height:any) => {
   return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
