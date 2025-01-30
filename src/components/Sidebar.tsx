@@ -45,7 +45,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar, openModal }: SidebarProps) {
                 </li>
                 <li className='sidebar-list-item'>
                     <a href='https://github.com/lazalajochy/budget-api' target='_blank' rel="noopener noreferrer">
-                        <FaGithub className='icon' /> Repository Back-End
+                        <FaGithub className='icon' /> Backend repository
                     </a>
                 </li>
             </ul>

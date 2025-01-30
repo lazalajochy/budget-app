@@ -3,8 +3,9 @@ import { GiPayMoney } from "react-icons/gi";
 import { MdPayments, MdPayment } from "react-icons/md";
 import apiClient from '../utils/request';
 import { useEffect, useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer }
-    from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
+
 interface ChartsProps {
     openModal: (content: string) => void;
 }
@@ -25,6 +26,21 @@ interface Category {
     createdBy: string;
 };
 
+
+const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
+
+const getPath = (x:any, y:any, width:any, height:any) => {
+  return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
+  ${x + width / 2}, ${y}
+  C${x + width / 2},${y + height / 3} ${x + (2 * width) / 3},${y + height} ${x + width}, ${y + height}
+  Z`;
+};
+
+const TriangleBar = (props:any) => {
+  const { fill, x, y, width, height } = props;
+
+  return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
+};
 
 function Charts({ }: ChartsProps) {
     const [currentIncome, setCurrentIncome] = useState<Income[]>([]);
@@ -63,7 +79,6 @@ function Charts({ }: ChartsProps) {
 
     useEffect(() => {
         (typeof currentIncome[0]?.salary === 'number' && typeof totalPayment === 'number') ? setReminder(currentIncome[0].salary - totalPayment) : setReminder(0);
-        console.log(data, "this is  the end data")
     }, [currentIncome, currentCategory, data]);
 
 
@@ -126,7 +141,11 @@ function Charts({ }: ChartsProps) {
                         <Legend />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="uv" fill="#82ca9d" />
+                        <Bar dataKey="uv" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
+                            {data.map((_, index) => (
+                                <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                            ))}
+                        </Bar>
                     </BarChart>
                 </ResponsiveContainer>
 
