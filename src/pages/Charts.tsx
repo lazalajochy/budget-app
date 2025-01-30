@@ -3,7 +3,7 @@ import { GiPayMoney } from "react-icons/gi";
 import { MdPayments, MdPayment } from "react-icons/md";
 import apiClient from '../utils/request';
 import { useEffect, useState } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line }
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer }
     from 'recharts';
 interface ChartsProps {
     openModal: (content: string) => void;
